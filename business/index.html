@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KR Business</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300&display=swap" rel="stylesheet"/>
     <style>
       html, body {
         height: 100%;
@@ -13,7 +13,7 @@
         background: #f6f6f6;
       }
       body {
-        font-family: 'Montserrat', Arial, sans-serif;
+        font-family: 'Ubuntu', Arial, sans-serif;
         color: #222;
         font-size: 1.08rem;
         line-height: 1.65;
@@ -33,6 +33,7 @@
         margin: 0 auto;
         padding: 2.3rem 1rem 1.1rem 1rem;
         position: relative;
+        max-width: 670px;
       }
       .hero-svg {
         width: 90px;
@@ -44,27 +45,36 @@
         display: block;
         margin: 0 auto 22px auto;
       }
-      h1, h2, h3 {
-        font-weight: 700;
-        line-height: 1.18;
+      h1, h2, h3, .kr-intro {
+        font-family: 'Raleway', 'Ubuntu', Arial, sans-serif;
+        font-weight: 300;
+        line-height: 1.19;
+        letter-spacing: 0.02em;
       }
       h1 {
-        font-size: 2.15rem;
+        font-size: 2.10rem;
         margin-bottom: 1.12rem;
         color: #151515;
         animation: fadeInUp 1s 0.12s both;
       }
-      h2 {
+      .kr-intro {
         font-size: 1.22rem;
-        color: #1877f2;
-        margin-bottom: 1.15rem;
-        font-weight: 400;
+        color: #1877F2;
+        font-weight: 300;
+        margin-bottom: 0.4rem;
+      }
+      h2 {
+        font-size: 1.16rem;
+        color: #222;
+        margin-bottom: 1.20rem;
+        font-weight: 300;
         animation: fadeInUp 1s 0.22s both;
       }
       h3 {
-        font-size: 1.09rem;
-        margin-bottom: 0.6rem;
+        font-size: 1.11rem;
+        margin-bottom: 0.74rem;
         color: #151515;
+        font-weight: 200;
       }
       @keyframes fadeInUp {
         from { opacity: 0; transform: translateY(24px);}
@@ -74,8 +84,8 @@
         background: #151515;
         color: #fff;
         border: none;
-        font-size: 1.13rem;
-        font-family: inherit;
+        font-size: 1.15rem;
+        font-family: 'Raleway', 'Ubuntu', Arial, sans-serif;
         padding: 1rem 2.2rem;
         border-radius: 32px;
         letter-spacing: 0.5px;
@@ -83,7 +93,7 @@
         cursor: pointer;
         margin-top: 13px;
         margin-bottom: 5px;
-        font-weight: 700;
+        font-weight: 300;
         outline: none;
         text-decoration: none !important;
         transition: transform 0.15s, background 0.19s, box-shadow 0.19s;
@@ -120,7 +130,7 @@
         padding: 1.35rem 1.05rem;
         text-align: center;
         flex: 1 1 160px;
-        min-width: 140px;
+        min-width: 220px;
         min-height: 210px;
         margin: 0.7rem 0.25rem;
         box-shadow: 0 2px 12px rgba(41,98,255,0.07);
@@ -129,17 +139,25 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        box-sizing: border-box;
       }
       .feature-card svg {
         width: 36px;
         height: 36px;
         margin-bottom: 18px;
+        display: block;
       }
       .feature-card h3 {
         font-size: 1.09rem;
         margin-bottom: 10px;
         color: #151515;
-        font-weight: 700;
+        font-weight: 300;
+        font-family: 'Raleway', 'Ubuntu', Arial, sans-serif;
+      }
+      .feature-card p {
+        font-size: 1.07rem;
+        font-family: 'Ubuntu', Arial, sans-serif;
+        font-weight: 300;
       }
       .divider {
         border-top: 1px solid #e1e8ed;
@@ -155,6 +173,7 @@
       .contact-section h2 {
         color: #151515;
         margin-bottom: 1.1rem;
+        font-family: 'Raleway', Arial, sans-serif;
       }
       ul {
         text-align: left;
@@ -164,31 +183,35 @@
         color: #336;
         font-size: 1.10rem;
         line-height: 1.7;
+        font-family: 'Ubuntu', Arial, sans-serif;
+        font-weight: 300;
       }
       li {
         margin-bottom: 10px;
-        font-weight: 400;
+        font-weight: 300;
       }
       .footer {
         text-align: center;
         color: #888;
         font-size: 0.96rem;
         padding: 1rem 0 0.5rem 0;
+        font-family: 'Ubuntu', Arial, sans-serif;
       }
       @media (max-width: 700px) {
         header {
           padding: 1.2rem 0.5rem 0.9rem 0.5rem;
         }
-        h1 { font-size: 1.37rem; }
-        h2 { font-size: 1.12rem; }
-        h3 { font-size: 1.03rem; }
-        body { font-size: 1.13rem; }
+        h1 { font-size: 1.31rem; }
+        .kr-intro { font-size: 1.10rem; }
+        h2 { font-size: 1.09rem; }
+        h3 { font-size: 0.98rem; }
+        body { font-size: 1.12rem; }
         .section { padding: 1.25rem 0.2rem;}
         .features { flex-direction: column; align-items: center; gap: 0.6rem; }
-        .feature-card { min-width: 0; width: 94vw; min-height: 150px; }
-        .feature-card svg { margin-bottom: 14px; }
-        .cta-btn { font-size: 1.07rem; padding: 0.8rem 1.1rem;}
-        ul { font-size: 1.11rem;}
+        .feature-card { min-width: 200px; width: 97vw; max-width:430px; min-height: 150px; }
+        .feature-card svg { margin-bottom: 14px; width:36px; height:36px; }
+        .cta-btn { font-size: 1.05rem; padding: 0.8rem 1.1rem;}
+        ul { font-size: 1.09rem;}
       }
     </style>
   </head>
@@ -197,9 +220,9 @@
       <header>
         <img src="kr_profile.jpg" alt="KR" class="hero-svg">
         <h1>Break the Digital Ceiling.</h1>
+        <div class="kr-intro">Hi I am KR</div>
         <h2>
-          Unlock new revenue. Let technology do the work.
-          <br />
+          Unlock new revenue. Let technology do the work.<br>
           Focus on what you do best.
         </h2>
         <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
