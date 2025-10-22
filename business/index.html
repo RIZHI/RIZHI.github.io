@@ -3,14 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Break the Digital Ceiling | Your Growth Partner</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap"
-      rel="stylesheet"
-    />
+    <title>KR Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet"/>
     <style>
-      html,
-      body {
+      html, body {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -19,6 +15,9 @@
       body {
         font-family: 'Montserrat', Arial, sans-serif;
         color: #222;
+        font-size: 1.08rem;
+        line-height: 1.65;
+        letter-spacing: 0.01em;
         overflow-x: hidden;
       }
       main {
@@ -32,74 +31,66 @@
       header {
         text-align: center;
         margin: 0 auto;
-        padding: 3rem 1rem 1.3rem 1rem;
+        padding: 2.3rem 1rem 1.1rem 1rem;
         position: relative;
       }
       .hero-svg {
         width: 90px;
-        margin-bottom: 18px;
-        animation: bounceSvg 1.3s cubic-bezier(0.64, -0.18, 0.44, 1.16) both;
+        height: 90px;
+        margin-bottom: 22px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 12px rgba(24,119,242,0.11);
+        display: block;
+        margin: 0 auto 22px auto;
       }
-      @keyframes bounceSvg {
-        0% {
-          transform: translateY(-30px);
-          opacity: 0;
-        }
-        70% {
-          transform: translateY(10px);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
+      h1, h2, h3 {
+        font-weight: 700;
+        line-height: 1.18;
       }
       h1 {
-        font-size: 2.4rem;
-        font-weight: 700;
-        letter-spacing: -2px;
+        font-size: 2.15rem;
+        margin-bottom: 1.12rem;
         color: #151515;
-        margin-bottom: 1rem;
         animation: fadeInUp 1s 0.12s both;
       }
       h2 {
-        font-size: 1.15rem;
+        font-size: 1.22rem;
         color: #1877f2;
-        margin-bottom: 1.3rem;
+        margin-bottom: 1.15rem;
         font-weight: 400;
         animation: fadeInUp 1s 0.22s both;
       }
+      h3 {
+        font-size: 1.09rem;
+        margin-bottom: 0.6rem;
+        color: #151515;
+      }
       @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(24px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(24px);}
+        to   { opacity: 1; transform: translateY(0);}
       }
       .cta-btn {
         background: #151515;
         color: #fff;
         border: none;
-        font-size: 1.1rem;
+        font-size: 1.13rem;
         font-family: inherit;
-        padding: 0.8rem 2.2rem;
+        padding: 1rem 2.2rem;
         border-radius: 32px;
         letter-spacing: 0.5px;
         box-shadow: 0 2px 14px rgba(22, 22, 22, 0.09);
         cursor: pointer;
-        margin-top: 12px;
+        margin-top: 13px;
         margin-bottom: 5px;
         font-weight: 700;
         outline: none;
-        text-decoration: none !important; /* <-- Add this line */
+        text-decoration: none !important;
         transition: transform 0.15s, background 0.19s, box-shadow 0.19s;
         animation: fadeInUp 1s 0.32s both;
+        text-align: center;
       }
-      .cta-btn:hover,
-      .cta-btn:focus {
+      .cta-btn:hover, .cta-btn:focus {
         background: #1877f2;
         transform: scale(1.07);
         box-shadow: 0 8px 28px rgba(41, 98, 255, 0.09);
@@ -107,7 +98,7 @@
       .section {
         background: #fff;
         border-radius: 18px;
-        padding: 1.7rem 0.8rem;
+        padding: 2.1rem 1.1rem;
         margin: 0.7rem 0;
         width: 100%;
         max-width: 670px;
@@ -119,35 +110,36 @@
       .features {
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 1.3rem;
         flex-wrap: wrap;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.9rem;
       }
       .feature-card {
         background: #f5f6fa;
-        border-radius: 11px;
-        padding: 1.2rem 0.8rem;
+        border-radius: 15px;
+        padding: 1.35rem 1.05rem;
         text-align: center;
-        flex: 1 1 140px;
-        min-width: 120px;
-        margin: 0.6rem 0.2rem;
-        box-shadow: 0 1px 8px rgba(41, 98, 255, 0.04);
+        flex: 1 1 160px;
+        min-width: 140px;
+        min-height: 210px;
+        margin: 0.7rem 0.25rem;
+        box-shadow: 0 2px 12px rgba(41,98,255,0.07);
         transition: box-shadow 0.22s, transform 0.18s;
-      }
-      .feature-card:hover {
-        box-shadow: 0 8px 24px rgba(41, 98, 255, 0.13);
-        transform: scale(1.03);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
       .feature-card svg {
         width: 36px;
         height: 36px;
-        margin-bottom: 12px;
+        margin-bottom: 18px;
       }
       .feature-card h3 {
+        font-size: 1.09rem;
+        margin-bottom: 10px;
         color: #151515;
-        font-size: 1.05rem;
         font-weight: 700;
-        margin-bottom: 8px;
       }
       .divider {
         border-top: 1px solid #e1e8ed;
@@ -155,24 +147,27 @@
       }
       .contact-section {
         text-align: center;
+        padding: 1.8rem 1.1rem;
         margin: 0.7rem 0 0.5rem 0;
         opacity: 0;
         transform: translateY(30px);
       }
       .contact-section h2 {
         color: #151515;
-        margin-bottom: 1rem;
+        margin-bottom: 1.1rem;
       }
       ul {
         text-align: left;
         max-width: 420px;
-        margin: 0.2rem auto 1rem auto;
-        padding-left: 1rem;
+        margin: 0.2rem auto 1.1rem auto;
+        padding-left: 1.15rem;
         color: #336;
-        font-size: 1.01rem;
+        font-size: 1.10rem;
+        line-height: 1.7;
       }
       li {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
+        font-weight: 400;
       }
       .footer {
         text-align: center;
@@ -181,55 +176,33 @@
         padding: 1rem 0 0.5rem 0;
       }
       @media (max-width: 700px) {
-        main {
-          padding: 5px;
+        header {
+          padding: 1.2rem 0.5rem 0.9rem 0.5rem;
         }
-        .section {
-          padding: 1rem 0.1rem;
-        }
-        .features {
-          flex-direction: column;
-          align-items: center;
-          gap: 0.22rem;
-        }
-        .feature-card {
-          min-width: 0;
-        }
-        ul {
-          text-align: left;
-          max-width: 92vw;
-        }
-        h1 {
-          font-size: 1.23rem;
-        }
-        h2 {
-          font-size: 1.01rem;
-        }
-        .cta-btn {
-          padding: 0.63rem 1.05rem;
-          font-size: 1rem;
-        }
+        h1 { font-size: 1.37rem; }
+        h2 { font-size: 1.12rem; }
+        h3 { font-size: 1.03rem; }
+        body { font-size: 1.13rem; }
+        .section { padding: 1.25rem 0.2rem;}
+        .features { flex-direction: column; align-items: center; gap: 0.6rem; }
+        .feature-card { min-width: 0; width: 94vw; min-height: 150px; }
+        .feature-card svg { margin-bottom: 14px; }
+        .cta-btn { font-size: 1.07rem; padding: 0.8rem 1.1rem;}
+        ul { font-size: 1.11rem;}
       }
     </style>
   </head>
   <body>
     <main>
       <header>
-      <img src="kr_profile.jpg" alt="KR" class="hero-svg" 
-     style="width:90px; height:90px; border-radius:50%; object-fit:cover; box-shadow:0 2px 12px rgba(24,119,242,0.11); display:block; margin:0 auto 18px auto;">
-
-
-
+        <img src="kr_profile.jpg" alt="KR" class="hero-svg">
         <h1>Break the Digital Ceiling.</h1>
         <h2>
           Unlock new revenue. Let technology do the work.
           <br />
           Focus on what you do best.
         </h2>
-        <button
-          class="cta-btn"
-          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});"
-        >
+        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
           Let's Transform Your Business
         </button>
       </header>
@@ -237,7 +210,7 @@
         <div class="features">
           <div class="feature-card">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect x="8" y="12" width="20" height="14" rx="3" fill="#1877F2" />
+              <rect x="8" y="12" width="20" height="14" rx="6" fill="#1877F2" />
               <rect x="12" y="8" width="12" height="5" rx="2.5" fill="#1877F2" />
               <rect x="14" y="8" width="8" height="2" rx="1" fill="#fff" opacity="0.5" />
               <rect x="8" y="17" width="20" height="3" fill="#1450A3" opacity="0.12" />
@@ -245,21 +218,22 @@
             </svg>
             <h3>Business Website</h3>
             <p>
-              Build your brand online.
-              <br />
+              Build your brand online.<br>
               Impress and convert customers.
             </p>
           </div>
           <div class="feature-card">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect x="6" y="10" width="24" height="16" rx="4" fill="#11af70" />
+              <rect x="6" y="10" width="24" height="16" rx="6" fill="#11af70" />
               <rect x="12" y="13" width="12" height="3" rx="1.5" fill="#fff" opacity="0.55" />
               <rect x="12" y="18" width="8" height="4" rx="2" fill="#fff" opacity="0.2" />
               <circle cx="14" cy="13.5" r="1" fill="#264E36" />
               <circle cx="22" cy="13.5" r="1" fill="#264E36" />
             </svg>
             <h3>Custom Web Apps</h3>
-            <p>Digitize your unique business processes.</p>
+            <p>
+              Digitize your unique business processes.
+            </p>
           </div>
           <div class="feature-card">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -267,56 +241,26 @@
               <rect x="14" y="18" width="4" height="12" rx="2" fill="#1877F2" opacity="0.78" />
               <rect x="21" y="10" width="4" height="20" rx="2" fill="#1877F2" opacity="0.54" />
               <rect x="28" y="16" width="4" height="14" rx="2" fill="#1877F2" opacity="0.3" />
-              <polyline
-                points="7,30 15,30 23,30 32,30"
-                stroke="#1877F2"
-                stroke-width="2"
-                fill="none"
-              />
-              <polyline
-                points="9,28 17,24 23,17 31,19"
-                stroke="#1450A3"
-                stroke-width="2"
-                fill="none"
-              />
+              <polyline points="7,30 15,30 23,30 32,30" stroke="#1877F2" stroke-width="2" fill="none"/>
+              <polyline points="9,28 17,24 23,17 31,19" stroke="#1450A3" stroke-width="2" fill="none"/>
             </svg>
             <h3>Data Insights</h3>
             <p>
-              See your numbers clearly.
-              <br />
+              See your numbers clearly.<br>
               Uncover growth.
             </p>
           </div>
           <div class="feature-card">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect
-                x="5"
-                y="16"
-                width="9"
-                height="7"
-                rx="1.5"
-                fill="#ffd600"
-                stroke="#bdae01"
-                stroke-width="1"
-              />
-              <rect x="7" y="22.2" width="5" height="2" rx="0.6" fill="#bdae01" />
-              <rect
-                x="22"
-                y="16"
-                width="9"
-                height="7"
-                rx="1.5"
-                fill="#ffd600"
-                stroke="#bdae01"
-                stroke-width="1"
-              />
-              <rect x="24" y="22.2" width="5" height="2" rx="0.6" fill="#bdae01" />
-              <path d="M14 19.5 H22" stroke="#bdae01" stroke-width="1.5" stroke-linecap="round" />
+              <rect x="5" y="16" width="9" height="7" rx="3" fill="#ffd600" stroke="#bdae01" stroke-width="1"/>
+              <rect x="7" y="22.2" width="5" height="2" rx="1" fill="#bdae01"/>
+              <rect x="22" y="16" width="9" height="7" rx="3" fill="#ffd600" stroke="#bdae01" stroke-width="1"/>
+              <rect x="24" y="22.2" width="5" height="2" rx="1" fill="#bdae01"/>
+              <path d="M14 19.5 H22" stroke="#bdae01" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <h3>Workflow Automation</h3>
             <p>
-              Let computers work.
-              <br />
+              Let computers work.<br>
               More time for you.
             </p>
           </div>
@@ -345,33 +289,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             margin: 18px 0 10px 0;
             width: 100%;
             max-width: 320px;
             margin-left: auto;
-            margin-right: auto;
-          "
-        >
+            margin-right: auto;">
           <a
             href="mailto:kamaleshwar497@gmail.com"
             class="cta-btn"
-            style="width: 100%; min-width: 150px; max-width: 320px; text-align: center"
-          >
+            style="width: 100%; min-width: 150px; max-width: 320px; text-align: center">
             Email
           </a>
           <a
-            href="https://wa.me/9197915346477text=Hi%20KR%2C%20I%20want%20to%20discuss%20digital%20growth%20for%20my%20business"
+            href="https://wa.me/919791536477?text=Hi%20KR%2C%20I%20want%20to%20discuss%20digital%20growth%20for%20my%20business"
             class="cta-btn"
             target="_blank"
-            style="
-              background: #25d366;
-              width: 100%;
-              min-width: 150px;
-              max-width: 320px;
-              text-align: center;
-            "
-          >
+            style="background: #25d366; width: 100%; min-width: 150px; max-width: 320px; text-align: center;">
             WhatsApp
           </a>
         </div>
