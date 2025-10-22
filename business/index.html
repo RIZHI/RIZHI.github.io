@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KR Business</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      html, body {
+      html,
+      body {
         height: 100%;
         margin: 0;
         padding: 0;
         background: #f6f6f6;
       }
       body {
-        font-family: 'Ubuntu', Arial, sans-serif;
+        font-family: "Ubuntu", Arial, sans-serif;
         color: #222;
         font-size: 1.08rem;
         line-height: 1.65;
@@ -41,51 +45,61 @@
         margin-bottom: 22px;
         border-radius: 50%;
         object-fit: cover;
-        box-shadow: 0 2px 12px rgba(24,119,242,0.11);
+        box-shadow: 0 2px 12px rgba(24, 119, 242, 0.11);
         display: block;
         margin: 0 auto 22px auto;
       }
-      h1, h2, h3, .kr-intro {
-        font-family: 'Raleway', 'Ubuntu', Arial, sans-serif;
-        font-weight: 300;
+      h1,
+      h2,
+      h3,
+      .kr-intro {
+        font-family: "Raleway", "Ubuntu", Arial, sans-serif;
         line-height: 1.19;
         letter-spacing: 0.02em;
       }
       h1 {
-        font-size: 2.10rem;
+        font-size: 2.1rem;
         margin-bottom: 1.12rem;
-        color: #151515;
+        color: #000;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
         animation: fadeInUp 1s 0.12s both;
+        font-weight: 500;
       }
       .kr-intro {
         font-size: 1.22rem;
-        color: #1877F2;
-        font-weight: 300;
+        color: #1877f2;
+        font-weight: 400;
         margin-bottom: 0.4rem;
       }
       h2 {
         font-size: 1.16rem;
-        color: #222;
-        margin-bottom: 1.20rem;
-        font-weight: 300;
+        color: #000;
+        margin-bottom: 1.2rem;
+        font-weight: 400;
         animation: fadeInUp 1s 0.22s both;
       }
       h3 {
-        font-size: 1.11rem;
+        font-size: 1.09rem;
         margin-bottom: 0.74rem;
-        color: #151515;
-        font-weight: 200;
+        color: #000;
+        font-weight: 500;
       }
       @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(24px);}
-        to   { opacity: 1; transform: translateY(0);}
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .cta-btn {
         background: #151515;
         color: #fff;
         border: none;
         font-size: 1.15rem;
-        font-family: 'Raleway', 'Ubuntu', Arial, sans-serif;
+        font-family: "Raleway", "Ubuntu", Arial, sans-serif;
         padding: 1rem 2.2rem;
         border-radius: 32px;
         letter-spacing: 0.5px;
@@ -93,14 +107,15 @@
         cursor: pointer;
         margin-top: 13px;
         margin-bottom: 5px;
-        font-weight: 300;
+        font-weight: 400;
         outline: none;
         text-decoration: none !important;
         transition: transform 0.15s, background 0.19s, box-shadow 0.19s;
         animation: fadeInUp 1s 0.32s both;
         text-align: center;
       }
-      .cta-btn:hover, .cta-btn:focus {
+      .cta-btn:hover,
+      .cta-btn:focus {
         background: #1877f2;
         transform: scale(1.07);
         box-shadow: 0 8px 28px rgba(41, 98, 255, 0.09);
@@ -126,42 +141,65 @@
       }
       .feature-card {
         background: #f5f6fa;
-        border-radius: 15px;
-        padding: 1.35rem 1.05rem;
+        border-radius: 16px;
+        padding: 2rem 1.25rem; /* more internal space for text */
         text-align: center;
-        flex: 1 1 160px;
-        min-width: 220px;
-        min-height: 210px;
-        margin: 0.7rem 0.25rem;
-        box-shadow: 0 2px 12px rgba(41,98,255,0.07);
+        flex: 1 1 220px; /* allow slightly wider cards */
+        min-width: 240px;
+        min-height: 280px; /* taller cards to accommodate multiline <p> */
+        margin: 0.8rem 0.4rem;
+        box-shadow: 0 3px 18px rgba(41, 98, 255, 0.08);
         transition: box-shadow 0.22s, transform 0.18s;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between; /* keeps heading/icon top and <p> at bottom */
         align-items: center;
+        gap: 12px;
         box-sizing: border-box;
       }
+      .feature-card:hover {
+        transform: scale(1.04);
+        box-shadow: 0 4px 20px rgba(41, 98, 255, 0.1);
+      }
       .feature-card svg {
-        width: 36px;
-        height: 36px;
-        margin-bottom: 18px;
+        width: 64px; /* slightly larger icon */
+        height: 64px;
         display: block;
+        flex: 0 0 auto; /* prevent flex shrink/expand on mobile */
+        margin-bottom: 8px;
+        color: #000;
+        opacity: 1 !important;
       }
       .feature-card h3 {
-        font-size: 1.09rem;
-        margin-bottom: 10px;
-        color: #151515;
-        font-weight: 300;
-        font-family: 'Raleway', 'Ubuntu', Arial, sans-serif;
+        font-size: 1.18rem;
+        margin-bottom: 8px;
+        color: #000;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-family: "Raleway", "Ubuntu", Arial, sans-serif;
       }
       .feature-card p {
-        font-size: 1.07rem;
-        font-family: 'Ubuntu', Arial, sans-serif;
+        font-size: 1.06rem; /* slightly larger for readability */
+        font-family: "Ubuntu", Arial, sans-serif;
         font-weight: 300;
+        margin-top: auto; /* ensure paragraph sits at the bottom */
+        text-align: center;
+        line-height: 1.5;
+        max-width: 92%;
       }
       .divider {
         border-top: 1px solid #e1e8ed;
         margin: 1.2rem 0 1.1rem 0;
+      }
+      /* darken and emphasize h3 that sit next to dividers */
+      .divider + h3,
+      .section .divider + h3,
+      .section h3 + .divider {
+        color: #0b0b0b; /* darker than default */
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        margin: 0.6rem 0;
       }
       .contact-section {
         text-align: center;
@@ -171,9 +209,9 @@
         transform: translateY(30px);
       }
       .contact-section h2 {
-        color: #151515;
+        color: #000;
         margin-bottom: 1.1rem;
-        font-family: 'Raleway', Arial, sans-serif;
+        font-family: "Raleway", Arial, sans-serif;
       }
       ul {
         text-align: left;
@@ -181,9 +219,9 @@
         margin: 0.2rem auto 1.1rem auto;
         padding-left: 1.15rem;
         color: #336;
-        font-size: 1.10rem;
+        font-size: 1.1rem;
         line-height: 1.7;
-        font-family: 'Ubuntu', Arial, sans-serif;
+        font-family: "Ubuntu", Arial, sans-serif;
         font-weight: 300;
       }
       li {
@@ -195,97 +233,252 @@
         color: #888;
         font-size: 0.96rem;
         padding: 1rem 0 0.5rem 0;
-        font-family: 'Ubuntu', Arial, sans-serif;
+        font-family: "Ubuntu", Arial, sans-serif;
       }
       @media (max-width: 700px) {
         header {
           padding: 1.2rem 0.5rem 0.9rem 0.5rem;
         }
-        h1 { font-size: 1.31rem; }
-        .kr-intro { font-size: 1.10rem; }
-        h2 { font-size: 1.09rem; }
-        h3 { font-size: 0.98rem; }
-        body { font-size: 1.12rem; }
-        .section { padding: 1.25rem 0.2rem;}
-        .features { flex-direction: column; align-items: center; gap: 0.6rem; }
-        .feature-card { min-width: 200px; width: 97vw; max-width:430px; min-height: 150px; }
-        .feature-card svg { margin-bottom: 14px; width:36px; height:36px; }
-        .cta-btn { font-size: 1.05rem; padding: 0.8rem 1.1rem;}
-        ul { font-size: 1.09rem;}
+        h1 {
+          font-size: 1.55rem;
+        }
+        .kr-intro {
+          font-size: 1.1rem;
+        }
+        h2 {
+          font-size: 1.09rem;
+        }
+        h3 {
+          font-size: 1.03rem;
+        }
+        .section {
+          padding: 1.25rem 0.2rem;
+        }
+        .features {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.6rem;
+        }
+        .feature-card {
+          width: 97vw;
+          max-width: 460px;
+          min-height: 220px; /* mobile card taller so multiline text doesn't overflow */
+          padding: 1.15rem 1rem;
+        }
+        .feature-card svg {
+          width: 56px;
+          height: 56px;
+        }
+        /* slightly reduce paragraph size on narrow screens while keeping spacing */
+        .feature-card p {
+          font-size: 0.98rem;
+          line-height: 1.45;
+        }
+        .cta-btn {
+          font-size: 1.05rem;
+          padding: 0.8rem 1.1rem;
+        }
       }
     </style>
   </head>
   <body>
     <main>
       <header>
-        <img src="kr_profile.jpg" alt="KR" class="hero-svg">
+        <img src="kr_profile.jpg" alt="KR" class="hero-svg" />
         <h1>Break the Digital Ceiling.</h1>
-        <div class="kr-intro">Hi I am KR</div>
+        <div class="kr-intro">Hi, I am KR</div>
         <h2>
-          Unlock new revenue. Let technology do the work.<br>
+          Unlock new revenue. Let technology do the work.<br />
           Focus on what you do best.
         </h2>
-        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+        <button
+          class="cta-btn"
+          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});"
+        >
           Let's Transform Your Business
         </button>
       </header>
       <div class="section">
         <div class="features">
           <div class="feature-card">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              preserveAspectRatio="xMidYMid meet"
+              fill="none"
+            >
               <rect x="8" y="12" width="20" height="14" rx="6" fill="#1877F2" />
-              <rect x="12" y="8" width="12" height="5" rx="2.5" fill="#1877F2" />
-              <rect x="14" y="8" width="8" height="2" rx="1" fill="#fff" opacity="0.5" />
-              <rect x="8" y="17" width="20" height="3" fill="#1450A3" opacity="0.12" />
-              <rect x="8" y="13" width="20" height="2" rx="1" fill="#fff" opacity="0.14" />
+              <rect
+                x="12"
+                y="8"
+                width="12"
+                height="5"
+                rx="2.5"
+                fill="#1877F2"
+              />
+              <rect
+                x="14"
+                y="8"
+                width="8"
+                height="2"
+                rx="1"
+                fill="#fff"
+                opacity="0.4"
+              />
+              <rect
+                x="8"
+                y="17"
+                width="20"
+                height="3"
+                fill="#1450A3"
+                opacity="0.3"
+              />
+              <rect
+                x="8"
+                y="13"
+                width="20"
+                height="2"
+                rx="1"
+                fill="#fff"
+                opacity="0.3"
+              />
             </svg>
             <h3>Business Website</h3>
-            <p>
-              Build your brand online.<br>
-              Impress and convert customers.
-            </p>
+            <p>Build your brand online.<br />Impress and convert customers.</p>
           </div>
           <div class="feature-card">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+            >
               <rect x="6" y="10" width="24" height="16" rx="6" fill="#11af70" />
-              <rect x="12" y="13" width="12" height="3" rx="1.5" fill="#fff" opacity="0.55" />
-              <rect x="12" y="18" width="8" height="4" rx="2" fill="#fff" opacity="0.2" />
+              <rect
+                x="12"
+                y="13"
+                width="12"
+                height="3"
+                rx="1.5"
+                fill="#fff"
+                opacity="0.5"
+              />
+              <rect
+                x="12"
+                y="18"
+                width="8"
+                height="4"
+                rx="2"
+                fill="#fff"
+                opacity="0.3"
+              />
               <circle cx="14" cy="13.5" r="1" fill="#264E36" />
               <circle cx="22" cy="13.5" r="1" fill="#264E36" />
             </svg>
             <h3>Custom Web Apps</h3>
-            <p>
-              Digitize your unique business processes.
-            </p>
+            <p>Digitize your unique business processes.</p>
           </div>
           <div class="feature-card">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+            >
               <rect x="7" y="24" width="4" height="6" rx="2" fill="#1877F2" />
-              <rect x="14" y="18" width="4" height="12" rx="2" fill="#1877F2" opacity="0.78" />
-              <rect x="21" y="10" width="4" height="20" rx="2" fill="#1877F2" opacity="0.54" />
-              <rect x="28" y="16" width="4" height="14" rx="2" fill="#1877F2" opacity="0.3" />
-              <polyline points="7,30 15,30 23,30 32,30" stroke="#1877F2" stroke-width="2" fill="none"/>
-              <polyline points="9,28 17,24 23,17 31,19" stroke="#1450A3" stroke-width="2" fill="none"/>
+              <rect
+                x="14"
+                y="18"
+                width="4"
+                height="12"
+                rx="2"
+                fill="#1877F2"
+                opacity="0.8"
+              />
+              <rect
+                x="21"
+                y="10"
+                width="4"
+                height="20"
+                rx="2"
+                fill="#1877F2"
+                opacity="0.6"
+              />
+              <rect
+                x="28"
+                y="16"
+                width="4"
+                height="14"
+                rx="2"
+                fill="#1877F2"
+                opacity="0.4"
+              />
+              <polyline
+                points="7,30 15,30 23,30 32,30"
+                stroke="#1877F2"
+                stroke-width="2"
+                fill="none"
+              />
+              <polyline
+                points="9,28 17,24 23,17 31,19"
+                stroke="#1450A3"
+                stroke-width="2"
+                fill="none"
+              />
             </svg>
             <h3>Data Insights</h3>
-            <p>
-              See your numbers clearly.<br>
-              Uncover growth.
-            </p>
+            <p>See your numbers clearly.<br />Uncover growth.</p>
           </div>
           <div class="feature-card">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect x="5" y="16" width="9" height="7" rx="3" fill="#ffd600" stroke="#bdae01" stroke-width="1"/>
-              <rect x="7" y="22.2" width="5" height="2" rx="1" fill="#bdae01"/>
-              <rect x="22" y="16" width="9" height="7" rx="3" fill="#ffd600" stroke="#bdae01" stroke-width="1"/>
-              <rect x="24" y="22.2" width="5" height="2" rx="1" fill="#bdae01"/>
-              <path d="M14 19.5 H22" stroke="#bdae01" stroke-width="1.5" stroke-linecap="round"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+            >
+              <rect
+                x="5"
+                y="16"
+                width="9"
+                height="7"
+                rx="3"
+                fill="#ffd600"
+                stroke="#bdae01"
+                stroke-width="1"
+              />
+              <rect x="7" y="22.2" width="5" height="2" rx="1" fill="#bdae01" />
+              <rect
+                x="22"
+                y="16"
+                width="9"
+                height="7"
+                rx="3"
+                fill="#ffd600"
+                stroke="#bdae01"
+                stroke-width="1"
+              />
+              <rect
+                x="24"
+                y="22.2"
+                width="5"
+                height="2"
+                rx="1"
+                fill="#bdae01"
+              />
+              <path
+                d="M14 19.5 H22"
+                stroke="#bdae01"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
             </svg>
             <h3>Workflow Automation</h3>
-            <p>
-              Let computers work.<br>
-              More time for you.
-            </p>
+            <p>Let computers work.<br />More time for you.</p>
           </div>
         </div>
       </div>
@@ -293,10 +486,10 @@
         <div class="divider"></div>
         <h3>Who is this for?</h3>
         <ul>
-          <li>Stuck at a revenue plateau?</li>
-          <li>Great business but tech is holding you back?</li>
-          <li>Want more time to focus on your strengths?</li>
-          <li>Need to modernize—fast?</li>
+          <li>Stuck at a revenue plateau ?</li>
+          <li>Great business but tech is holding you back ?</li>
+          <li>Want more time to focus on your strengths ?</li>
+          <li>Need to modernize—fast ?</li>
         </ul>
         <div class="divider"></div>
         <h3>Why partner with me?</h3>
@@ -317,18 +510,33 @@
             width: 100%;
             max-width: 320px;
             margin-left: auto;
-            margin-right: auto;">
+            margin-right: auto;
+          "
+        >
           <a
             href="mailto:kamaleshwar497@gmail.com"
             class="cta-btn"
-            style="width: 100%; min-width: 150px; max-width: 320px; text-align: center">
+            style="
+              width: 100%;
+              min-width: 150px;
+              max-width: 320px;
+              text-align: center;
+            "
+          >
             Email
           </a>
           <a
             href="https://wa.me/919791536477?text=Hi%20KR%2C%20I%20want%20to%20discuss%20digital%20growth%20for%20my%20business"
             class="cta-btn"
             target="_blank"
-            style="background: #25d366; width: 100%; min-width: 150px; max-width: 320px; text-align: center;">
+            style="
+              background: #25d366;
+              width: 100%;
+              min-width: 150px;
+              max-width: 320px;
+              text-align: center;
+            "
+          >
             WhatsApp
           </a>
         </div>
@@ -336,15 +544,16 @@
       </div>
     </main>
     <script>
-      // Fade-in for sections
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
-          let sections = document.querySelectorAll('.section, .contact-section');
+          let sections = document.querySelectorAll(
+            ".section, .contact-section"
+          );
           sections.forEach(function (s, i) {
             setTimeout(function () {
               s.style.opacity = 1;
-              s.style.transform = 'translateY(0)';
-              s.style.transition = 'opacity 0.8s, transform 0.8s';
+              s.style.transform = "translateY(0)";
+              s.style.transition = "opacity 0.8s, transform 0.8s";
             }, i * 160 + 400);
           });
         }, 100);
